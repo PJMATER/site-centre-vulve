@@ -1,12 +1,18 @@
 :root {
-  --primary: #0077b6;
-  --primary-dark: #005f8e;
-  --accent: #e8f0f2;
-  --bg: #f5f7f9;
-  --text: #333;
-  --white: #fff;
-  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* 1) Smooth scroll global */
+html {
+  scroll-behavior: smooth;
 }
+
+/* 2) Transition et état “scrolled” du header */
+header.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+header.navbar.scrolled {
+  background-color: rgba(255,255,255,0.95);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
 /* Reset & boîte */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
