@@ -3,72 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centre Vulvo-Périnéal</title>
+  <title>Accueil | Centre Vulvo-Périnéal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- INDEX.HTML (Page d'accueil repensée et esthétiquement stylée) -->
-<section class="hero">
-  <h1>Centre de Référence Vulvo-Périnéal</h1>
-  <p>Un lieu d’expertise et d’innovation dédié à la santé intime des femmes.</p>
-  <div class="cta">
-    <a class="cta-button" href="centre.html">Découvrir le centre</a>
-    <a class="cta-button" href="rdv.html">Prendre rendez-vous</a>
-  </div>
-</section>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Centre Vulvo-Périnéal</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="centre.html">Le centre</a></li>
+          <li><a href="equipe.html">Notre équipe</a></li>
+          <li><a href="pathologies.html">Pathologies</a></li>
+          <li><a href="temoignages.html">Témoignages</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+      </nav>
+    </div>
+  </header>
 
-<section class="intro-simple">
-  <p>Notre centre propose une approche pluridisciplinaire et humaine pour la prise en charge des pathologies vulvaires et périnéales. À travers des techniques médicales avancées et une écoute attentive, nous accompagnons les femmes dans un parcours de soin respectueux, personnalisé et fondé sur les données scientifiques les plus récentes.</p>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>Un lieu d’expertise et d’innovation dédié à la santé intime des femmes</h1>
+      <div class="cta">
+        <a href="centre.html" class="btn">Découvrir le centre</a>
+        <a href="rdv.html" class="btn btn-secondary">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </section>
 
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f7f9;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-  .hero {
-    background-color: #e8f0f2;
-    padding: 5rem 2rem;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    color: #004466;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .cta {
-    margin-top: 2rem;
-  }
-  .cta-button {
-    display: inline-block;
-    margin: 0 0.5rem;
-    padding: 1rem 2rem;
-    background-color: #0077b6;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  .cta-button:hover {
-    background-color: #005f8e;
-  }
-  .intro-simple {
-    background: white;
-    padding: 3rem 2rem;
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: auto;
-  }
-</style>
+  <!-- QUICK LINKS -->
+  <section class="home-links container">
+    <div class="link-card"><a href="equipe.html">Notre équipe</a></div>
+    <div class="link-card"><a href="pathologies.html">Pathologies</a></div>
+    <div class="link-card"><a href="temoignages.html">Témoignages</a></div>
+    <div class="link-card"><a href="contact.html">Contact</a></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Centre Vulvo-Périnéal. Tous droits réservés.</p>
+      <p><a href="mentions.html">Mentions légales</a> | <a href="confidentialite.html">Politique de confidentialité</a></p>
+    </div>
+  </footer>
+
+  <!-- NAV TOGGLE SCRIPT -->
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', ()=>{
+      document.querySelector('.nav-links').classList.toggle('nav-links-visible');
+    });
+  </script>
 </body>
 </html>
