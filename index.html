@@ -1,3 +1,4 @@
+<!-- INDEX.HTML -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,6 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil | Centre Vulvo-Périnéal</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hero background image & overlay */
+    .hero {
+      background: url('images/hero-bg.jpg') no-repeat center center / cover;
+      position: relative;
+      padding: 8rem 1rem;
+      color: #fff;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    /* CTA buttons styling */
+    .btn, .btn-secondary {
+      border-radius: 30px;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: transform 0.3s, background-color 0.3s;
+      display: inline-block;
+    }
+    .btn {
+      background-color: #0077b6;
+      color: #fff;
+      margin-right: 1rem;
+    }
+    .btn:hover {
+      background-color: #005f8e;
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+    .btn-secondary:hover {
+      background-color: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    /* Quick links styling */
+    .home-links .link-card a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0077b6;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      background-color: #fff;
+      display: block;
+      transition: box-shadow 0.3s, transform 0.3s;
+      text-align: center;
+    }
+    .home-links .link-card a:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(-3px);
+    }
+  </style>
 </head>
 <body>
   <!-- HEADER -->
@@ -20,7 +86,7 @@
           <li><a href="temoignages.html">Témoignages</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button class="nav-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+        <button class="nav-toggle" aria-label="Ouvrir le menu">☰</button>
       </nav>
     </div>
   </header>
@@ -31,7 +97,7 @@
       <h1>Un lieu d’expertise et d’innovation dédié à la santé intime des femmes</h1>
       <div class="cta">
         <a href="centre.html" class="btn">Découvrir le centre</a>
-        <a href="rdv.html" class="btn btn-secondary">Prendre rendez-vous</a>
+        <a href="rdv.html" class="btn-secondary">Prendre rendez-vous</a>
       </div>
     </div>
   </section>
@@ -52,7 +118,7 @@
     </div>
   </footer>
 
-  <!-- NAV TOGGLE SCRIPT -->
+  <!-- SCRIPT NAV TOGGLE -->
   <script>
     document.querySelector('.nav-toggle').addEventListener('click', ()=>{
       document.querySelector('.nav-links').classList.toggle('nav-links-visible');
